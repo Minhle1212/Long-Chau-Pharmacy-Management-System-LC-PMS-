@@ -1,0 +1,275 @@
+/* Main container */
+.prescription-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20vh 5vw 10vh 5vw;
+    min-height: 100vh;
+}
+
+
+.prescription-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-tertiary);
+    margin-bottom: 3vh;
+    text-align: center;
+}
+
+
+.prescription-products {
+    background-color: white;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 15px;
+    margin-bottom: 3vh;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.prescription-products-header {
+    background-color: var(--color-primary);
+    padding: 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.prescription-products-list {
+    display: flex;
+    flex-direction: column;
+    max-height: 60vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.prescription-products-list::-webkit-scrollbar {
+    display: none;
+}
+
+
+.prescription-product-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    gap: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+.prescription-product-item:hover {
+    background-color: #f8f9fa;
+}
+
+.prescription-product-item:last-child {
+    border-bottom: none;
+}
+
+.prescription-product-item:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.prescription-product-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+.prescription-product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.prescription-product-sku {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.prescription-product-name {
+    font-size: 1rem;
+    color: var(--color-tertiary);
+    font-weight: 600;
+}
+
+.prescription-required-badge {
+    display: inline-block;
+    background-color: #ff6b6b;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: 5px;
+    width: fit-content;
+}
+
+/* Upload form section */
+.prescription-upload-section {
+    background-color: white;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.prescription-upload-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-tertiary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.prescription-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.prescription-file-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.prescription-file-label {
+    font-weight: 500;
+    color: var(--color-tertiary);
+    font-size: 1rem;
+}
+
+.prescription-file-input {
+    width: 100%;
+    padding: 15px;
+    border: 2px dashed #ddd;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.prescription-file-input:hover {
+    border-color: var(--color-primary);
+    background-color: #e3f2fd;
+}
+
+.prescription-file-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(73, 142, 243, 0.1);
+}
+
+.prescription-file-info {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.prescription-submit-btn {
+    background-color: var(--color-secondary);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Kumbh Sans', sans-serif;
+    align-self: center;
+    min-width: 200px;
+}
+
+.prescription-submit-btn:hover {
+    background-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(73, 142, 243, 0.3);
+}
+
+.prescription-submit-btn:active {
+    transform: translateY(0);
+}
+
+
+.prescription-instructions {
+    background-color: #e3f2fd;
+    border-left: 4px solid var(--color-primary);
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+    margin-bottom: 20px;
+}
+
+.prescription-instructions h4 {
+    color: var(--color-tertiary);
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.prescription-instructions ul {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding-left: 20px;
+}
+
+.prescription-instructions ul li {
+    margin-bottom: 5px;
+    list-style-type: disc;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .prescription-main {
+        padding: 18vh 3vw 8vh 3vw;
+    }
+    
+    .prescription-title {
+        font-size: 1.5rem;
+    }
+    
+    .prescription-product-item {
+        grid-template-columns: 60px 1fr;
+        padding: 15px;
+        gap: 10px;
+    }
+    
+    .prescription-product-item img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .prescription-upload-section {
+        padding: 20px;
+    }
+    
+    .prescription-submit-btn {
+        min-width: 150px;
+        font-size: 1rem;
+    }
+}
+
+
+.prescription-empty {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+}
+
+.prescription-empty i {
+    font-size: 3rem;
+    color: #ddd;
+    margin-bottom: 15px;
+}
